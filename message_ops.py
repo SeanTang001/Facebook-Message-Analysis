@@ -11,10 +11,13 @@ def loadMsgs(foldername):
     messageTotal = 0
     memberList = set()
     for i in os.listdir(foldername):
-        jsonobj = json.load(open(foldername + "/" + i, "r"))
-        memberList = memberList | set([i["name"] for i in \
-            jsonobj["participants"]])
-        messages.append(jsonobj["messages"])
+        try:
+            jsonobj = json.load(open(foldername + "/" + i, "r"))
+            memberList = memberList | set([i["name"] for i in \
+                jsonobj["participants"]])
+            messages.append(jsonobj["messages"])
+        except:
+            continue
     for i in messages:
         messageTotal += len(i)
     return (messages, messageTotal, memberList)
