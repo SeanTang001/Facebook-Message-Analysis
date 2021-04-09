@@ -1,0 +1,12 @@
+name: webapp
+title: webapp
+username:
+account: seantang001
+server: shinyapps.io
+hostUrl: https://api.shinyapps.io/v1
+appId: 3939070
+bundleId: 4452527
+url: https://seantang001.shinyapps.io/webapp/
+when: 1618008099.83422
+asMultiple: FALSE
+asStatic: FALSE
